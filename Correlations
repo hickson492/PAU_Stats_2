@@ -1,0 +1,23 @@
+#Create a function to do correlations among 3 variables
+pearnspear_3var <- function(x, y, z) {
+  pearson_corr_xy <- cor.test(x, y)
+  print(pearson_corr_xy)
+  spearman_corr_xy <- cor.test(x, y, method="spearman", exact=FALSE)
+  print(spearman_corr_xy)
+  pearson_corr_xz <- cor.test(x, z)
+  print(pearson_corr_xz)
+  spearman_corr_xz <- cor.test(x, z, method="spearman", exact=FALSE)
+  print(spearman_corr_xz)
+  pearson_corr_yz <- cor.test(y, z)
+  print(pearson_corr_yz)
+  spearman_corr_yz <- cor.test(y, z, method="spearman", exact=FALSE)
+  print(spearman_corr_yz)
+}
+
+#Create a function to do correlations among 3 variables
+pearnspear_2var <- function(x, y) {
+  pearson_corr_xy <- cor.test(x, y)
+  print(pearson_corr_xy)
+  spearman_corr_xy <- cor.test(x, y, method="spearman", exact=FALSE)
+  print(spearman_corr_xy)
+}
